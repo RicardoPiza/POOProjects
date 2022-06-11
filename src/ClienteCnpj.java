@@ -1,4 +1,5 @@
 
+import DAO.DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -24,10 +25,7 @@ public class ClienteCnpj extends Cliente implements DAO {
     }
 
     public ClienteCnpj() {
-    }
-
-    
-    
+    }  
     
     @Override
     public Connection conectar() {
@@ -50,6 +48,7 @@ public class ClienteCnpj extends Cliente implements DAO {
             st.executeUpdate(sql);
             st.close();
             conectar().close();
+            
         } catch (Exception e) {
             System.out.println("Falha ao conectar com banco de dados" + e.toString());
         }
@@ -57,14 +56,44 @@ public class ClienteCnpj extends Cliente implements DAO {
 
     @Override
     public void listarCliente(String sql) {
+        try {
+            conectar();
+            java.sql.Statement st = conectar().createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            conectar().close();
+            
+        } catch (Exception e) {
+            System.out.println("Falha ao conectar com banco de dados" + e.toString());
+        }
     }
 
     @Override
     public void atualizarCliente(String sql) {
+        try {
+            conectar();
+            java.sql.Statement st = conectar().createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            conectar().close();
+            
+        } catch (Exception e) {
+            System.out.println("Falha ao conectar com banco de dados" + e.toString());
+        }
     }
 
     @Override
     public void excluirCliente(String sql) {
+        try {
+            conectar();
+            java.sql.Statement st = conectar().createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            conectar().close();
+            
+        } catch (Exception e) {
+            System.out.println("Falha ao conectar com banco de dados" + e.toString());
+        }
     }
 
 }

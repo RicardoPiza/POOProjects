@@ -1,3 +1,5 @@
+package DAO;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -10,7 +12,7 @@ import java.sql.*;
 public interface DAO {
 
     String driver = "com.mysql.cj.jdbc.Driver";
-    String url = "jdbc:mysql://127.0.0.1:3306/JAVAAPPS?useTimezone=true&serverTimezone=UTC";
+    String url = "jdbc:mysql://127.0.0.1:3306/JAVAAPP?useTimezone=true&serverTimezone=UTC";
     String user = "root";
     String password = "45243253";
 
